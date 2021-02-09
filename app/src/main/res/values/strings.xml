@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="quiz">Quiz</string>
+    <string name="Animal">Animal</string>
+    <string name="btn_skip_text">Skip</string>
+    <string name="history_category">Category:</string>
+    <string name="history_text_view_category">Mixed</string>
+    <string name="correct_ans">Correct answers:</string>
+    <string name="text_view_correct_ans">8/10</string>
+    <string name="history_difficulty">Difficulty:</string>
+    <string name="text_view_difficulty">Easy</string>
+    <string name="text_view_data">12 may 2019 20:32</string>
+    <string name="settings_title">Settings</string>
+    <string name="share_this_app">Share this app</string>
+    <string name="rate_us">Rate us</string>
+    <string name="leave_feedback">Leave feedback</string>
+    <string name="clear_history">Clear history</string>
+    <string name="version">v 1.0.0</string>
+    <string name="category_result">Category:</string>
+    <string name="result_difficulty">Difficulty:</string>
+    <string name="result_correct_ans">Correct answers:</string>
+    <string name="result_tv">Result:</string>
+    <string name="btn_finish_text">Finish</string>
+    <string name="delete">delete</string>
+    <string name="no">no</string>
+    <string name="result">Result</string>
+    <string name="content_description">contentDescription</string>
+    <string-array name="spinner_difficulty_example">
+        <item>any type</item>
+        <item>easy</item>
+        <item>medium</item>
+        <item>hard</item>
+    </string-array>
+</resources>

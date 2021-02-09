@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "287432200590",
+    "project_id": "quizapp-fddec",
+    "storage_bucket": "quizapp-fddec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287432200590:android:28999291a2b7675bd094df",
+        "android_client_info": {
+          "package_name": "com.shahrasul.quizapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287432200590-62h9mk25muqngo76j0fe0vn25qg56lhb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiFPjdZfTN2VQ2LiGTJmpwJtTWozETXVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287432200590-62h9mk25muqngo76j0fe0vn25qg56lhb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
