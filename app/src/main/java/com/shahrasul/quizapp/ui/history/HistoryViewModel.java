@@ -10,7 +10,7 @@ import com.shahrasul.quizapp.ui.models.QuizResult;
 import java.util.List;
 
 public class HistoryViewModel extends ViewModel {
-    public LiveData<List<QuizResult>> listHistoryMutableLiveData = new MutableLiveData<>();
+    public LiveData<List<QuizResult>> listHistoryMutableLiveData;
 
     public HistoryViewModel() {
         main();
@@ -20,7 +20,7 @@ public class HistoryViewModel extends ViewModel {
         listHistoryMutableLiveData = QuizApp.getInstance().getQuizRepository().getAllHistoryResult();
     }
 
-    public void popupMenuDelete(int position) {
-        QuizApp.getInstance().getQuizRepository().deleteToId((long)listHistoryMutableLiveData.getValue().get(position).getId());
+    public void popupMenuDelete(int id) {
+        QuizApp.getInstance().getQuizRepository().deleteToId((long) id);
     }
 }

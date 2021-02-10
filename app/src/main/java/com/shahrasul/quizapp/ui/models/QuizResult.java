@@ -31,10 +31,11 @@ public class QuizResult implements Serializable {
     private String resultPercentage;
 
     @ColumnInfo(name = "amount_correct_ans")
-    private int AmountCorrectAns;
+    private int amountCorrectAns;
 
     @ColumnInfo(name = "string_date")
     private String stringDate;
+    private int procent = 0;
 
     public String getStringDate() {
         return stringDate;
@@ -84,6 +85,14 @@ public class QuizResult implements Serializable {
         this.createdAt = createdAt;
     }
 
+    public int getProcent() {
+        return procent;
+    }
+
+    public void setProcent(int procent) {
+        this.procent = procent;
+    }
+
     //public List<Question> getQuestions() {
     //    return questions;
     //}
@@ -92,11 +101,12 @@ public class QuizResult implements Serializable {
     //    this.questions = questions;
     //}
 
-    public QuizResult(String category, String difficulty, int correctAnswer, String createdAt) {
+    public QuizResult(String category, String difficulty, int correctAnswer, String createdAt, int procent) {
         this.category = category;
         this.difficulty = difficulty;
         this.correctAnswer = correctAnswer;
         this.createdAt = createdAt;
+        this.procent = procent;
     }
 
     public void setResultPercentage(String resultPercentage) {
@@ -108,10 +118,10 @@ public class QuizResult implements Serializable {
     }
 
     public int getAmountCorrectAns() {
-        return AmountCorrectAns;
+        return amountCorrectAns;
     }
 
     public void setAmountCorrectAns(int amountCorrectAns) {
-        AmountCorrectAns = amountCorrectAns;
+        amountCorrectAns = amountCorrectAns;
     }
 }

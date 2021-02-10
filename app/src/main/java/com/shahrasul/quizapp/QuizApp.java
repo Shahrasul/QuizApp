@@ -22,7 +22,7 @@ public class QuizApp extends Application {
         super.onCreate();
         instance = this;
         quizApiClient = new QuizApiClient();
-        IHistoryClient historyClient = (IHistoryClient) new HistoryStorage();
+        IHistoryClient historyClient = new HistoryStorage();
         quizRepository = new QuizRepository(historyClient,quizApiClient);
         quizDataBase = Room.databaseBuilder(
                 this,QuizDataBase.class,

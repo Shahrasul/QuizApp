@@ -1,5 +1,7 @@
 package com.shahrasul.quizapp.ui.result;
 
+import android.util.Log;
+
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 

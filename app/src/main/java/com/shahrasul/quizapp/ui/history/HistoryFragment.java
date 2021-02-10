@@ -17,12 +17,17 @@ import android.widget.PopupMenu;
 import com.shahrasul.quizapp.R;
 import com.shahrasul.quizapp.databinding.HistoryFragmentBinding;
 import com.shahrasul.quizapp.ui.adapter.HistoryAdapter;
+import com.shahrasul.quizapp.ui.models.QuizResult;
+
+import java.net.CookieHandler;
+import java.util.List;
 
 public class HistoryFragment extends Fragment {
 
     private HistoryViewModel mViewModel;
     private HistoryFragmentBinding binding;
     private HistoryAdapter adapter;
+    private List<QuizResult> list;
 
     public static HistoryFragment newInstance() {
         return new HistoryFragment();
@@ -61,14 +66,12 @@ public class HistoryFragment extends Fragment {
         PopupMenu popupMenu = new PopupMenu(requireContext(), v);
         popupMenu.inflate(R.menu.popup_menu);
 
-        popupMenu
-                .setOnMenuItemClickListener(item -> {
+        popupMenu.setOnMenuItemClickListener(item -> {
                     switch (item.getItemId()) {
                         case R.id.delete:
-                            mViewModel.popupMenuDelete(position);
+                            mViewModel.popupMenuDelete(list.get(position).getId());
                             return true;
                         case R.id.no:
-
                             return true;
                         default:
                             return false;
@@ -80,6 +83,7 @@ public class HistoryFragment extends Fragment {
 
     private void subscribeHistory() {
         mViewModel.listHistoryMutableLiveData.observe(requireActivity(), historyModels -> {
+            list = historyModels;
             binding.message.setText("you have no history yet");
             if (historyModels.isEmpty()) binding.message.setVisibility(View.VISIBLE);
             else binding.message.setVisibility(View.GONE);

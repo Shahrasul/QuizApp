@@ -24,7 +24,6 @@ public class QuizActivity extends AppCompatActivity {
     private QuizViewModel mViewModel;
     private ActivityQuizBinding binding;
     private QuizAdapter adapter;
-    private Integer categoryId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +95,7 @@ public class QuizActivity extends AppCompatActivity {
         binding.progressBarQuestionActivity.setMax(amountInt);
 
         mViewModel = new ViewModelProvider(this).get(QuizViewModel.class);
+        mViewModel.setCategoryName(categoryName);
         mViewModel.getQuestions(amount, categoryId, difficulty);
         adapter = new QuizAdapter();
         mViewModel.setCategory();
